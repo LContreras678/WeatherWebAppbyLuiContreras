@@ -1,5 +1,6 @@
 Reference List for program code
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 C# code reference list for the C# files:
 Program.cs, WeatherResultOutput.cs, ProjectInfo.cshtml.cs, Index.cshtml.cs, Error.cshtml.cs
 WeatherResult.cshtml.cs, WeatherResultOutput.cs
@@ -50,6 +51,8 @@ Rovenskii, A. (2022). List in C#: implementation and features. [online] PVS-Stud
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+
 Bootstrap Reference List 
 (Referencing for bootstrap.bundle.min.js and bootstrap.min.css)
 
@@ -65,6 +68,8 @@ Smith, S. and Brock, D. (2025). Layout in ASP.NET Core. [online] Microsoft.com. 
 Smith, S. and Microsoft (2017). Building Beautiful, Responsive Sites with Bootstrap — ASP.NET documentation. [online] Readthedocs.io. Available at: https://aspnetcore.readthedocs.io/en/stable/client-side/bootstrap.html [Accessed 26 Feb. 2026].
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
 JavaScript Reference List (site.js)
 
@@ -104,6 +109,7 @@ Refsnes Data (2026b). JavaScript Async. [online] W3 Schools. Available at: https
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 HTML and CSS Reference List (referencing for all CSHTML files, _Layout.cshtml.css)
@@ -178,5 +184,6 @@ Contreras, L. (2025). Image of Greenwich Park. [Online image] imgbb. Available a
 
 Favicon.ico (tool used)
 
-Logo created by Canva Logo Maker: https://www.canva.com/create/logos/#   W e a t h e r W e b A p p b y L u i C o n t r e r a s  
+Logo created by Canva Logo Maker: https://www.canva.com/create/logos/#   W e a t h e r W e b A p p b y L u i C o n t r e r a s 
+ 
  
