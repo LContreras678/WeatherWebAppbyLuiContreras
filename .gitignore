@@ -43,4 +43,9 @@ appsettings.Development.json
 
 packages/
 
+# Ignore large artifacts and installer files
+*.msi
+*.zip
+publish.zip
+
 
