@@ -3,13 +3,29 @@
 
 <h1>Weather Overview</h1>
 
+<!--
+This is the Weather Results page. 
+The page takes in the value of city/town, as written by the user and then processed in this Razor page.
+There is an if condition if the data received by the Weather Model is not empty, which then displays various weather information (Refsnes Data, 2026b), using the OpenWeather API data. (OpenWeather, 2026)
+These includes:
+
+1. The Weather Description
+2. Min/Max Temperatures 
+3. Weather Icons
+
+If there is no information, there is an else condition (Refsnes Data, 2026b), which is used for exception handling, in the situation where there is no data available.
+Below the page is a loop (Refsnes Data, 2026a), which the statement to show hourly weather conditions, precipitation probability, etc.
+A link to return to the Index page is provided for the user.
+
+-->
+
 @if (Model.Weather != null)
 {
     <div class="weather-summary" style="display:flex; align-items:center; gap:1rem;">
         <div style="display:flex; align-items:center; gap:1rem;">
             <div style="text-align:center;">
-                <img class="weather-icon"
-                     src="@(Model.Weather.HourlyForecast != null && Model.Weather.HourlyForecast.Count > 0 ? Model.Weather.HourlyForecast[0].IconName : "https://openweathermap.org/img/wn/03d@2x.png")"
+                 <img class="weather-icon"
+                     src='@(Model.Weather.CurrentIcon ?? (Model.Weather.HourlyForecast != null && Model.Weather.HourlyForecast.Count > 0 ? Model.Weather.HourlyForecast[0].IconName : "https://openweathermap.org/img/wn/03d@2x.png"))'
                      alt="Current Weather Icon" style="max-width:100px;" />
                 <div style="font-size:2.5rem; font-weight:700; margin-top:0.25rem;">@Model.Weather.TempsDisplay</div>
                 <p><strong>@Model.Weather.City</strong></p>

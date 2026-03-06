@@ -1,5 +1,12 @@
-﻿/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿/*
+CSS file for the Layout page. 
+The primary version used for Bootstrap is version 5.3.8 (Otto and Bootstrap Contributors, 2025)
+The CSS elements here ensure that the template found in the ASP.NET Core is placed for a consistent appearance throughout the weather web app.
+These elements include, but not limited to, buttons, the nav bar (found on the top of every page), borders, etc.
+(Bootstrap Contributors, 2025a, 2025b, 2025c)
+
+*/
+
 
 a.navbar-brand {
   white-space: normal;
@@ -40,9 +47,7 @@ button.accept-policy {
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
+  position: relative;
   width: 100%;
-  white-space: nowrap;
   line-height: 60px;
 }

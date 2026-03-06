@@ -1,0 +1,205 @@
+
+<!--
+This is the Layout page.
+A nav element (Refsnes Data, 2026e) is used to define the navigation links. 
+As seen in the Bootstrap files, this is the default template layout when an ASP.NET Core page is created. This also affects the CSS and JavaScript for the app.
+(Smith and Microsoft, 2017)
+The style is also consistent throughout all of the pages in weather web app. 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> - WeatherWebApp by Lui Contreras</title>
+    <script type="importmap">{
+  "imports": {
+    "./js/site.js": "./js/site.ykq4lonyrd.js",
+    "./lib/bootstrap/dist/js/bootstrap.bundle.min.js": "./lib/bootstrap/dist/js/bootstrap.bundle.min.sxuy7wsrid.js"
+  }
+}</script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.3n3hl47r06.css" />
+    <link rel="stylesheet" href="/WeatherWebAppLuiC.6ib4d9f95i.styles.css" />
+</head>
+<body>
+    <header b-o8r7oz4ecs>
+        <nav b-o8r7oz4ecs class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div b-o8r7oz4ecs class="container">
+                <a class="navbar-brand" href="/">Weather Web App </a>
+                <button b-o8r7oz4ecs class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span b-o8r7oz4ecs class="navbar-toggler-icon"></span>
+                </button>
+                <div b-o8r7oz4ecs class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul b-o8r7oz4ecs class="navbar-nav flex-grow-1">
+                        <li b-o8r7oz4ecs class="nav-item">
+                            <a class="nav-link text-dark" href="/">Search</a>
+                        </li>
+                        <li b-o8r7oz4ecs class="nav-item">
+                            <a class="nav-link text-dark" href="">Project Info and Survey</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div b-o8r7oz4ecs class="container">
+        <main b-o8r7oz4ecs role="main" class="pb-3">
+            
+<!--
+From the ASP.NET Core template.
+
+This page tells the weather web app that all views will use the _Layout.cshtml file.
+(Smith and Brock, 2025)
+
+-->
+
+<h1>Weather Overview</h1>
+
+<!--
+This is the Weather Results page. 
+The page takes in the value of city/town, as written by the user and then processed in this Razor page.
+There is an if condition if the data received by the Weather Model is not empty, which then displays various weather information (Refsnes Data, 2026b), using the OpenWeather API data. (OpenWeather, 2026)
+These includes:
+
+1. The Weather Description
+2. Min/Max Temperatures 
+3. Weather Icons
+
+If there is no information, there is an else condition (Refsnes Data, 2026b), which is used for exception handling, in the situation where there is no data available.
+Below the page is a loop (Refsnes Data, 2026a), which the statement to show hourly weather conditions, precipitation probability, etc.
+A link to return to the Index page is provided for the user.
+
+-->
+
+    <div class="weather-summary" style="display:flex; align-items:center; gap:1rem;">
+        <div style="display:flex; align-items:center; gap:1rem;">
+            <div style="text-align:center;">
+                 <img class="weather-icon"
+                     src='https://openweathermap.org/img/wn/50d@2x.png'
+                     alt="Current Weather Icon" style="max-width:100px;" />
+                <div style="font-size:2.5rem; font-weight:700; margin-top:0.25rem;">3&#xB0;C / 37.2 &#xB0;F</div>
+                <p><strong>New York</strong></p>
+            </div>
+            <div class="weather-text">
+                <p style="font-size:1.5rem; font-weight:600; margin:0.25rem 0;">mist</p>
+                <hr style="border:0; height:1px; background:#e0e0e0; margin:0.5rem 0;" />
+                <p><strong>Feels Like: </strong>-2&#xB0;C / 28.2 &#xB0;F</p>
+                <hr style="border:0; height:1px; background:#e0e0e0; margin:0.5rem 0;" />
+                <p><strong>Min. Temperature: </strong>3&#xB0;C / 37.2 &#xB0;F</p>
+                <hr style="border:0; height:1px; background:#e0e0e0; margin:0.5rem 0;" />
+                <p><strong>Max. Temperature: </strong>5&#xB0;C / 40.3 &#xB0;F</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="overflow-x: auto; white-space: nowrap; margin: 2em 0;">
+        <div style="display: flex; gap: 1em; min-width: 600px;">
+                <div style="flex: 0 0 auto; background: #808080; border-radius: 8px; box-shadow: 0 2px 6px #0001; padding: 1em; text-align: center; min-width: 100px;">
+                    <div>04:00</div>
+                    <img class="hour-icon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="Weather Icon/Description" />
+                    <div>3&#xB0;C / 37.6 &#xB0;F</div>
+                    <div style="margin-top:0.5rem; font-size:0.85rem; color:#ffffffcc;">Precipitation Probability</div>
+                    <div style="font-weight:600;">66%</div>
+                </div>
+                <div style="flex: 0 0 auto; background: #808080; border-radius: 8px; box-shadow: 0 2px 6px #0001; padding: 1em; text-align: center; min-width: 100px;">
+                    <div>05:00</div>
+                    <img class="hour-icon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="Weather Icon/Description" />
+                    <div>3&#xB0;C / 37.2 &#xB0;F</div>
+                    <div style="margin-top:0.5rem; font-size:0.85rem; color:#ffffffcc;">Precipitation Probability</div>
+                    <div style="font-weight:600;">44%</div>
+                </div>
+                <div style="flex: 0 0 auto; background: #808080; border-radius: 8px; box-shadow: 0 2px 6px #0001; padding: 1em; text-align: center; min-width: 100px;">
+                    <div>06:00</div>
+                    <img class="hour-icon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="Weather Icon/Description" />
+                    <div>3&#xB0;C / 37.4 &#xB0;F</div>
+                    <div style="margin-top:0.5rem; font-size:0.85rem; color:#ffffffcc;">Precipitation Probability</div>
+                    <div style="font-weight:600;">28%</div>
+                </div>
+                <div style="flex: 0 0 auto; background: #808080; border-radius: 8px; box-shadow: 0 2px 6px #0001; padding: 1em; text-align: center; min-width: 100px;">
+                    <div>07:00</div>
+                    <img class="hour-icon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="Weather Icon/Description" />
+                    <div>3&#xB0;C / 37.5 &#xB0;F</div>
+                    <div style="margin-top:0.5rem; font-size:0.85rem; color:#ffffffcc;">Precipitation Probability</div>
+                    <div style="font-weight:600;">19%</div>
+                </div>
+                <div style="flex: 0 0 auto; background: #808080; border-radius: 8px; box-shadow: 0 2px 6px #0001; padding: 1em; text-align: center; min-width: 100px;">
+                    <div>08:00</div>
+                    <img class="hour-icon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="Weather Icon/Description" />
+                    <div>3&#xB0;C / 37.6 &#xB0;F</div>
+                    <div style="margin-top:0.5rem; font-size:0.85rem; color:#ffffffcc;">Precipitation Probability</div>
+                    <div style="font-weight:600;">0%</div>
+                </div>
+                <div style="flex: 0 0 auto; background: #808080; border-radius: 8px; box-shadow: 0 2px 6px #0001; padding: 1em; text-align: center; min-width: 100px;">
+                    <div>09:00</div>
+                    <img class="hour-icon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="Weather Icon/Description" />
+                    <div>3&#xB0;C / 37.9 &#xB0;F</div>
+                    <div style="margin-top:0.5rem; font-size:0.85rem; color:#ffffffcc;">Precipitation Probability</div>
+                    <div style="font-weight:600;">0%</div>
+                </div>
+                <div style="flex: 0 0 auto; background: #808080; border-radius: 8px; box-shadow: 0 2px 6px #0001; padding: 1em; text-align: center; min-width: 100px;">
+                    <div>10:00</div>
+                    <img class="hour-icon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="Weather Icon/Description" />
+                    <div>3&#xB0;C / 37.8 &#xB0;F</div>
+                    <div style="margin-top:0.5rem; font-size:0.85rem; color:#ffffffcc;">Precipitation Probability</div>
+                    <div style="font-weight:600;">0%</div>
+                </div>
+                <div style="flex: 0 0 auto; background: #808080; border-radius: 8px; box-shadow: 0 2px 6px #0001; padding: 1em; text-align: center; min-width: 100px;">
+                    <div>11:00</div>
+                    <img class="hour-icon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="Weather Icon/Description" />
+                    <div>3&#xB0;C / 38.2 &#xB0;F</div>
+                    <div style="margin-top:0.5rem; font-size:0.85rem; color:#ffffffcc;">Precipitation Probability</div>
+                    <div style="font-weight:600;">0%</div>
+                </div>
+                <div style="flex: 0 0 auto; background: #808080; border-radius: 8px; box-shadow: 0 2px 6px #0001; padding: 1em; text-align: center; min-width: 100px;">
+                    <div>12:00</div>
+                    <img class="hour-icon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="Weather Icon/Description" />
+                    <div>4&#xB0;C / 38.9 &#xB0;F</div>
+                    <div style="margin-top:0.5rem; font-size:0.85rem; color:#ffffffcc;">Precipitation Probability</div>
+                    <div style="font-weight:600;">0%</div>
+                </div>
+                <div style="flex: 0 0 auto; background: #808080; border-radius: 8px; box-shadow: 0 2px 6px #0001; padding: 1em; text-align: center; min-width: 100px;">
+                    <div>13:00</div>
+                    <img class="hour-icon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="Weather Icon/Description" />
+                    <div>4&#xB0;C / 38.8 &#xB0;F</div>
+                    <div style="margin-top:0.5rem; font-size:0.85rem; color:#ffffffcc;">Precipitation Probability</div>
+                    <div style="font-weight:600;">0%</div>
+                </div>
+                <div style="flex: 0 0 auto; background: #808080; border-radius: 8px; box-shadow: 0 2px 6px #0001; padding: 1em; text-align: center; min-width: 100px;">
+                    <div>14:00</div>
+                    <img class="hour-icon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="Weather Icon/Description" />
+                    <div>4&#xB0;C / 39.4 &#xB0;F</div>
+                    <div style="margin-top:0.5rem; font-size:0.85rem; color:#ffffffcc;">Precipitation Probability</div>
+                    <div style="font-weight:600;">0%</div>
+                </div>
+                <div style="flex: 0 0 auto; background: #808080; border-radius: 8px; box-shadow: 0 2px 6px #0001; padding: 1em; text-align: center; min-width: 100px;">
+                    <div>15:00</div>
+                    <img class="hour-icon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="Weather Icon/Description" />
+                    <div>5&#xB0;C / 40.2 &#xB0;F</div>
+                    <div style="margin-top:0.5rem; font-size:0.85rem; color:#ffffffcc;">Precipitation Probability</div>
+                    <div style="font-weight:600;">0%</div>
+                </div>
+        </div>
+    </div>
+
+<div style="margin-top: 2em;">
+    <a href="/" style="color: #003366;">Return Home</a>
+</div>
+        </main>
+    </div>
+
+    <footer b-o8r7oz4ecs class="border-top footer text-muted">
+        <div b-o8r7oz4ecs class="container">
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.ykq4lonyrd.js"></script>
+
+    
+</body>
+</html>

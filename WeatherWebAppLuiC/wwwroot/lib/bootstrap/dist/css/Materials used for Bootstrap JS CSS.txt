@@ -1,0 +1,23 @@
+This text file is written to reference the usage of Bootstrap JS and CSS in the Weather Web Application:
+1. bootstrap.bundle.min.js
+2. bootstrap.min.css
+
+To begin with, the bootstrap files for the CSS and JS are added with the use of Bootstrap (Smith and Microsoft, 2017).
+Since the web app was created using the ASP.NET Core Web App Template, this comes with Bootstrap pre-installed. (Smith and Microsoft, 2017)
+The layout and styling of the web application is achieved by using Bootstrap CSS, which allow for responsive designs for a variety of screens.
+A layout page is created (as also seen in _Layout.cshtml), which allows for Bootstrap to function. (Smith and Brock, 2025)
+
+Its implementation is light (utilised for the search bar and navbar. There is also a collapsible burger menu seen on smaller or mobile screens to accomodate responsive design). 
+However, this is kept to ensure that the project can be expanded further in a future iteration. For example, creating a mobile version of the weather web app and comparing the user experience between the desktop and mobile versions.
+The source code is available to be viewed at GitHub(Bootstrap Contributors, 2025): https://github.com/twbs/bootstrap
+As seen in the LICENSE file and in the GitHub repository, Bootstrap is licensed under the MIT license, allowing for changes, modifications, distribution, etc. with the software. (Massachusetts Institute of Technology, n.d.)
+
+Reference list
+
+Bootstrap Contributors (2025). Bootstrap. [online] GitHub. Available at: https://github.com/twbs/bootstrap [Accessed 26 Feb. 2026].
+
+Massachusetts Institute of Technology (n.d.). Exploring the MIT Open Source License: A Comprehensive Guide | MIT Technology Licensing Office. [online] tlo.mit.edu. Available at: https://tlo.mit.edu/understand-ip/exploring-mit-open-source-license-comprehensive-guide [Accessed 26 Feb. 2026].
+
+Smith, S. and Brock, D. (2025). Layout in ASP.NET Core. [online] Microsoft.com. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/views/layout?view=aspnetcore-10.0 [Accessed 23 Feb. 2026].
+
+Smith, S. and Microsoft (2017). Building Beautiful, Responsive Sites with Bootstrap — ASP.NET documentation. [online] Readthedocs.io. Available at: https://aspnetcore.readthedocs.io/en/stable/client-side/bootstrap.html [Accessed 26 Feb. 2026].

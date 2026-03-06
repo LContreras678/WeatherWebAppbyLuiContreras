@@ -1,8 +1,0 @@
-D:\University of Sunderland MSc\Weather Web App\Weather-Web-App-by-Lui-Contreras\publish\WeatherWebAppLuiC.exe
-D:\University of Sunderland MSc\Weather Web App\Weather-Web-App-by-Lui-Contreras\publish\appsettings.Development.json
-D:\University of Sunderland MSc\Weather Web App\Weather-Web-App-by-Lui-Contreras\publish\appsettings.json
-D:\University of Sunderland MSc\Weather Web App\Weather-Web-App-by-Lui-Contreras\publish\WeatherWebAppLuiC.dll
-D:\University of Sunderland MSc\Weather Web App\Weather-Web-App-by-Lui-Contreras\publish\WeatherWebAppLuiC.deps.json
-D:\University of Sunderland MSc\Weather Web App\Weather-Web-App-by-Lui-Contreras\publish\WeatherWebAppLuiC.runtimeconfig.json
-D:\University of Sunderland MSc\Weather Web App\Weather-Web-App-by-Lui-Contreras\publish\WeatherWebAppLuiC.pdb
-D:\University of Sunderland MSc\Weather Web App\Weather-Web-App-by-Lui-Contreras\publish\Newtonsoft.Json.dll

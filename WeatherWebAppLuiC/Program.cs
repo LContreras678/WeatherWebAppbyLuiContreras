@@ -1,3 +1,9 @@
+// This is the template when creating the template pages for the Weather Web Application.
+// (Anderson, Brock and Larkin, 2025)
+// Using Razor pages allows to build the foundation to run the application.
+
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 

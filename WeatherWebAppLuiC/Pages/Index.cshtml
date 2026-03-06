@@ -1,8 +1,24 @@
 ﻿@page
-@model IndexModel
+@model WeatherWebAppLuiC.Pages.IndexModel
 @{
     ViewData["Title"] = "Search";
 }
+
+<!--
+Index page for the weather web app. 
+
+The index page contains the hero image, search bar, weather around the world and links to the Project Info/Survey Link. 
+A div class for the hero wrapper image in order to display the hero image. (MDN Contributors, 2025b)
+An input element (MDN Contributors, 2025e) is used for the search bar, styling the search bar to give its full apperance for the user, and accepts written input for the city/town.
+The form element (Refsnes Data, 2026d) is placed here, to allow input from the user. The information received here is processed for the Models in the weather web app.
+A button element (Refsnes Data, 2026c), which allows the user to click in order to progress to the weather results page. 
+
+An if and else logic for the Razor page is created in order to display the weather around the world (Refsnes Data, 2026b). The else condition handles the exception or in a scenario where the weather web app is unable to show a weather icon or condition and defaults to a cloudy condition from the OpenWeather API. (OpenWeather, 2026)
+The autocomplete functionality is explained in their respective CSS and JS files. 
+
+Finally, a table is created to display the weather conditions around the world, with a list of pre-defined cities. (Refsnes Data, 2026f)
+
+-->
 
 <div class="text-center">
     <h1 class="display-4">Welcome to the Weather Web App</h1>
@@ -16,11 +32,42 @@
             <input asp-for="Lat" type="hidden" id="Lat" />
             <input asp-for="Lon" type="hidden" id="Lon" />
             <div id="city-suggestions" class="autocomplete-items" style="position:relative; z-index:1000;"></div>
-            <div style="text-align:center; margin-top:8px;"><button type="submit" class="center-button">Search</button></div>
+            <div style="text-align:center; margin-top:8px;"><button type="submit" class="center-button">Search City</button></div>
         </form>
     </div>
     <p style="position: absolute; bottom: 12px; left: 16px; margin:0; color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,0.6); z-index:2;">Image of Greenwich Park (Lui Contreras, 2025)</p>
 </div>
+<table class="caption-top simple-weather-table" style="width:100%; max-width:900px; margin:1rem auto; border-collapse:collapse;">
+    <caption>Weather around the world</caption>
+        <tr>
+            <th>New York</th>
+            <th>London</th>
+            <th>Tokyo</th>
+            <th>Belfast</th>
+            <th>Dublin</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="text-align:center;">
+            @if (Model.PreloadedWeathers != null && Model.PreloadedWeathers.Count >= 5)
+            {
+                <td><img id="icon-newyork" src="@Model.PreloadedWeathers[0].HourlyForecast[0].IconName" alt="@Model.PreloadedWeathers[0].WeatherDescription" style="width:48px;height:auto;" /></td>
+                <td><img id="icon-london" src="@Model.PreloadedWeathers[1].HourlyForecast[0].IconName" alt="@Model.PreloadedWeathers[1].WeatherDescription" style="width:48px;height:auto;" /></td>
+                <td><img id="icon-japan" src="@Model.PreloadedWeathers[2].HourlyForecast[0].IconName" alt="@Model.PreloadedWeathers[2].WeatherDescription" style="width:48px;height:auto;" /></td>
+                <td><img id="icon-belfast" src="@Model.PreloadedWeathers[3].HourlyForecast[0].IconName" alt="@Model.PreloadedWeathers[3].WeatherDescription" style="width:48px;height:auto;" /></td>
+                <td><img id="icon-dublin" src="@Model.PreloadedWeathers[4].HourlyForecast[0].IconName" alt="@Model.PreloadedWeathers[4].WeatherDescription" style="width:48px;height:auto;" /></td>
+            }
+            else
+            {
+                <td><img id="icon-newyork" src="https://openweathermap.org/img/wn/03d@2x.png" alt="New York" style="width:48px;height:auto;" /></td>
+                <td><img id="icon-london" src="https://openweathermap.org/img/wn/03d@2x.png" alt="London" style="width:48px;height:auto;" /></td>
+                <td><img id="icon-japan" src="https://openweathermap.org/img/wn/03d@2x.png" alt="Tokyo" style="width:48px;height:auto;" /></td>
+                <td><img id="icon-belfast" src="https://openweathermap.org/img/wn/03d@2x.png" alt="Belfast" style="width:48px;height:auto;" /></td>
+                <td><img id="icon-dublin" src="https://openweathermap.org/img/wn/03d@2x.png" alt="Dublin" style="width:48px;height:auto;" /></td>
+            }
+        </tr>
+    </tbody>
+</table>
 
 @if (Model.Weather != null)
 {
@@ -29,20 +76,7 @@
     </div>
 }
 
-@* Preloaded city cards for New York and Tokyo *@
-@if (Model.PreloadedWeathers != null && Model.PreloadedWeathers.Count > 0)
-{
-    <div style="display:flex; gap:1rem; justify-content:center; margin-top:1.5rem; flex-wrap:wrap;">
-        @foreach (var w in Model.PreloadedWeathers)
-        {
-            <div style="background:#f5f5f5; border-radius:8px; padding:1rem; text-align:center; width:180px; box-shadow:0 2px 6px #0001; background: #808080;">
-                <div style="font-weight:600; margin-bottom:0.25rem;">@w.City</div>
-                <img src="@(w.HourlyForecast.FirstOrDefault()?.IconName ?? "https://openweathermap.org/img/wn/03d@2x.png")" alt="Weather Icon" style="max-width:80px; display:block; margin:0.25rem auto;" />
-                <div style="font-size:1.1rem; font-weight:400; margin-top:0.5rem;">@w.TempsDisplay</div>
-            </div>
-        }
-    </div>
-}
 
-<!-- Ensure site.js is loaded for autocomplete functionality -->
+
+<!-- Ensures site.js is loaded for autocomplete functionality -->
 <script src="~/js/site.js"></script>

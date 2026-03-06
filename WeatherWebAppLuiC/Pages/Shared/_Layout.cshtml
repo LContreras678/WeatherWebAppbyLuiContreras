@@ -1,11 +1,21 @@
-﻿<!DOCTYPE html>
+﻿
+<!--
+This is the Layout page.
+A nav element (Refsnes Data, 2026e) is used to define the navigation links. 
+As seen in the Bootstrap files, this is the default template layout when an ASP.NET Core page is created. This also affects the CSS and JavaScript for the app.
+(Smith and Microsoft, 2017)
+The style is also consistent throughout all of the pages in weather web app. 
+
+-->
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - WeatherWebApp by Lui Contreras</title>
     <script type="importmap"></script>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WeatherWebAppLuiC.styles.css" asp-append-version="true" />
 </head>
@@ -42,8 +52,7 @@
         </div>
     </footer>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)

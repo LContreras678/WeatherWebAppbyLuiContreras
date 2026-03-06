@@ -1,5 +1,9 @@
+/*
+This is the CSS file, which 
 
+Similar to the site.js file, this CSS file will go through the key elements that allow the weather web app to function, which includes the suggestions bar, weather conditions, etc.
 
+This code has been placed in comments, since it is a leftover from a popup feature that existed in a previous iteration, but removed later on.
 .popup-modal {
   display: none;
   position: fixed;
@@ -27,6 +31,24 @@
   font-size: 65%;
   cursor: pointer;
 }
+
+
+
+Certain elements were used to enhance the style of the weather web application.
+These include using media queries (Refsnes Data, 2026), in order to make the web app responsive across a wide variety of screens.
+There are some elements of it if the web app is viewed on a mobile device, but it is not yet fully implemented. 
+
+The weather icons are appropriately sized (MDN Contributors, 2025f), as well as other elements such as the search button. 
+Various positions (MDN Contributors, 2025g) are applied to certain elements, such as the navbar, the hero image, the form, the autocomplete or list of suggested cities, etc.
+The table for the cities and the weather around the world uses caption-side (MDN Contributors, 2025c) to display the title "Weather around the world". 
+There is a cursor element for the button, allowing users to distinguish (MDN Contributors, 2025d) which elements can be clicked. 
+
+Finally, for the search and autocomplete bar, a border-radius (MDN Contributors, 2025b) is used to create a pleasing and modern shape for the user interface.
+The background was given a gradient (MDN Contributors, 2025a, 2025e), as to complete the overall visual and signature blue style of the weather web app.
+
+*/
+
+
 
 .center-button {
   width: 100px;
@@ -149,4 +171,26 @@ button-search {
   width: 25px;
   height: 25px;
   object-fit: contain;
+}
+
+
+table.caption-top > caption {
+  caption-side: top;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.autocomplete-item {
+  background: #ffffff;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  padding: 6px;
+  margin-bottom: 2px;
+}
+.autocomplete-item:focus {
+  outline: none;
+}
+.autocomplete-active {
+  background: #cfc5c5;
 }
