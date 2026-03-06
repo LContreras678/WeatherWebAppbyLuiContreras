@@ -1,4 +1,4 @@
-Reference List for program code
+Reference List for program code.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 C# code reference list for the C# files:
@@ -187,3 +187,4 @@ Favicon.ico (tool used)
 Logo created by Canva Logo Maker: https://www.canva.com/create/logos/#   W e a t h e r W e b A p p b y L u i C o n t r e r a s 
  
  
+
